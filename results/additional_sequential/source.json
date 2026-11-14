@@ -1,0 +1,22 @@
+{
+  "scope": "Original sequential evidence: recorded program policies versus frozen initial ranking; separate from the matched-feedback Adam study.",
+  "training_seeds": [
+    20260920,
+    20260921,
+    20260922
+  ],
+  "statistical_unit": "Average five gene folds within each training seed, then mean and sample SD across exactly three training seeds.",
+  "sources": [
+    {
+      "construction": "reference",
+      "source_basename": "discovery_per_seed.tsv",
+      "source_sha256": "2290ddf4fd452d49acfa9b28eb0fdf55aae3e6db98db8bc0cc672ba5a8c57288"
+    },
+    {
+      "construction": "official_DeepSeek",
+      "source_basename": "discovery_per_seed.tsv",
+      "source_sha256": "adfd5141dea4a7af549a3a24f7cb77f27be7ade5a30b0c6759336b5a3f38c563"
+    }
+  ],
+  "new_fits": 0
+}

@@ -1,0 +1,44 @@
+name: Publish project page
+on:
+  push:
+    branches: [main]
+    paths: ['homepage/**', 'assets/WeightLoop.pdf', '.github/workflows/pages.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check Pages activation
+        id: site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh api "repos/$GITHUB_REPOSITORY/pages" >/dev/null 2>&1; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Project source is ready. Enable Settings > Pages > GitHub Actions, then rerun this workflow."
+            echo "Enable **Settings → Pages → GitHub Actions** to publish the prepared project page." >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - uses: actions/configure-pages@v5
+        if: steps.site.outputs.enabled == 'true'
+      - name: Upload static project page
+        uses: actions/upload-pages-artifact@v4
+        if: steps.site.outputs.enabled == 'true'
+        with:
+          path: homepage
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
+        if: steps.site.outputs.enabled == 'true'

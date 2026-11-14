@@ -1,0 +1,94 @@
+{
+  "version": "unified_core_with_rna_calibration_20261113",
+  "scope": "Source tables and protocols for the shared core manuscript.",
+  "primary_comparison": "Fixed editing versus Adam in the DeepSeek-selected native parameter pool, with matched feedback.",
+  "original_studies": "Three-training-seed MLP functional ranking and sequential discovery.",
+  "files": [
+    {
+      "path": "results/README.md",
+      "sha256": "dac79691509d73aeec0369f031102d01bb5928987720b2ba47991a6060d5c522",
+      "bytes": 1921
+    },
+    {
+      "path": "results/additional_functional/role_metrics.tsv",
+      "sha256": "210f032dc6a2f4cf9f6498f1721bea218e0346604701ed58193e7cf157a93566",
+      "bytes": 19006
+    },
+    {
+      "path": "results/additional_functional/summary.tsv",
+      "sha256": "f9ef8a72c1402acd7366f0d7ae9cd78e7e2446d3dcc397e58b352676e4b33b01",
+      "bytes": 1167
+    },
+    {
+      "path": "results/additional_sequential/discovery_per_seed.tsv",
+      "sha256": "a94312b0a2405caf8be81b04ed5f718168e169dbdf4af89816b63343c795abcc",
+      "bytes": 5864
+    },
+    {
+      "path": "results/additional_sequential/discovery_summary.tsv",
+      "sha256": "4fd8ccb726ae4e29002c4c4ce90ababaf96abd94238e4450de85051767d4c5ed",
+      "bytes": 2115
+    },
+    {
+      "path": "results/additional_sequential/official_DeepSeek_with_frozen_per_seed.tsv",
+      "sha256": "356596321bf2514418fcc48d9c9a525fb5e4dd3729288084b860b82b630796a0",
+      "bytes": 4504
+    },
+    {
+      "path": "results/additional_sequential/reference_with_frozen_per_seed.tsv",
+      "sha256": "27a8ca40e8d80943b465d4a4a0a4f9624cacd800ff4b6d69a8c7e95b7501c614",
+      "bytes": 4505
+    },
+    {
+      "path": "results/additional_sequential/source.json",
+      "sha256": "f2dd2ff50c6d21a99ff9bc410d649f5bec02a5ec7dbbe91485fe5a73818ddd65",
+      "bytes": 778
+    },
+    {
+      "path": "results/rna_calibration/protocol.json",
+      "sha256": "19fa9f388c271d6cc6e8282c7bb988bc9f61b1bb327d91adc3e7f4ba70c88c2e",
+      "bytes": 5362
+    },
+    {
+      "path": "results/rna_calibration/seed_metrics.tsv",
+      "sha256": "cf0c91d680265cee3f99f4481396292fbbd72ae3ea4b6c72f68f866339303635",
+      "bytes": 1359
+    },
+    {
+      "path": "results/rna_calibration/split_metrics.tsv",
+      "sha256": "e8eb5d00cbecaab1a702cd63bdf4463b741b9c5ca850e5b3b70c7a21a7c36f2a",
+      "bytes": 3731
+    },
+    {
+      "path": "results/rna_calibration/summary.tsv",
+      "sha256": "62afd7bdab7cc01c010d9d374b20be5a701e2abe558d2905bd50ed68b1244551",
+      "bytes": 1000
+    },
+    {
+      "path": "results/static_cases/case_protocols.json",
+      "sha256": "0bf0d8bfe83c50fb1188f26c3c06b7c43f6e3503df850f670d52adfaa520771e",
+      "bytes": 4782
+    },
+    {
+      "path": "results/static_cases/feedback_parity.json",
+      "sha256": "182e0e00ff6df2bb03e660fa54051a813d34ae98519ace6da2a863094a8872e4",
+      "bytes": 11440
+    },
+    {
+      "path": "results/static_cases/feedback_stream.tsv",
+      "sha256": "cf03b0d7ff17e0623f2aa210a827e73179c87e8aeb4d60f5c6a90ea20e6da769",
+      "bytes": 1861
+    },
+    {
+      "path": "results/static_cases/final_metrics.tsv",
+      "sha256": "e1988ff4042f1320c4503a7ec0aa537cca2e29ff5495731660ab9699eed613dd",
+      "bytes": 1199
+    },
+    {
+      "path": "results/static_cases/native_updates.tsv",
+      "sha256": "a51c636c7f4efce803f7827c4c8081be344d7737517e1d6870d89e942f573a6f",
+      "bytes": 626
+    }
+  ],
+  "rna_calibration": "Native scGPT and scFoundation+GEARS output calibration, with Original, same-feedback Adam and the reference editor; 54 split records, 18 seed means and six three-training-seed summaries."
+}

@@ -1,0 +1,13 @@
+task	provider_condition	update	feedback_entities	status	changed_from_previous	changed_from_original	allowed_native_parameters
+BIO03	deepseek	1	8	ACCEPTED	1024	1024	1024
+BIO03	deepseek	2	12	ACCEPTED	1024	1024	1024
+BIO03	deepseek	3	16	ACCEPTED	1024	1024	1024
+SEIS03	deepseek	1	24	ACCEPTED	27	27	27
+SEIS03	deepseek	2	40	RETAIN_CURRENT	0	27	27
+SEIS03	deepseek	3	56	ACCEPTED	27	26	27
+MET02	deepseek	1	20	ACCEPTED	4	4	192
+MET02	deepseek	2	41	ACCEPTED	4	4	192
+MET02	deepseek	3	61	ACCEPTED	4	4	192
+PHY05	deepseek	1	10	ACCEPTED	129	129	129
+PHY05	deepseek	2	18	ACCEPTED	129	129	129
+PHY05	deepseek	3	26	ACCEPTED	129	129	129

@@ -1,0 +1,122 @@
+{
+  "cases": [
+    {
+      "task": "BIO03",
+      "dataset": "Adamson",
+      "model": "GEARS",
+      "provider_condition": "deepseek",
+      "original_method_id": "HypoLoop",
+      "parameter_names": [
+        "indv_b2"
+      ],
+      "allowed_native_parameters": 1024,
+      "role_sizes": {
+        "F0": 8,
+        "B1": 4,
+        "B2": 4,
+        "E": 9
+      },
+      "statistical_unit": "whole canonical CRISPRi target gene",
+      "native_reload_status": "NATIVE_REPLAY_PASS",
+      "source_run_id": "runs/campaign60_v1_seed17/tasks/BIO03/stream_attempt_02",
+      "audit_sha256": "e3427c545768853fedd84d9b5bc2bed85aff84185dc51b6f6f73fb11d051ac54",
+      "manifest_canonical_sha256": "9729994a398144c6ccbca745ee2c188b9a185677d59fff15e75e5cb4e74d9cec",
+      "API_role": "Parameter-pool selection; not independent update-program code generation",
+      "matched_Adam_steps": 80,
+      "selected_existing_development_case": true,
+      "pretraining_overlap": null,
+      "archive_seed": 17
+    },
+    {
+      "task": "SEIS03",
+      "dataset": "INSTANCE",
+      "model": "PhaseNet",
+      "provider_condition": "deepseek",
+      "original_method_id": "HypoLoop",
+      "parameter_names": [
+        "out.weight",
+        "out.bias"
+      ],
+      "allowed_native_parameters": 27,
+      "role_sizes": {
+        "F0": 24,
+        "B1": 16,
+        "B2": 16,
+        "E": 64
+      },
+      "statistical_unit": "whole source earthquake event, all observed source samples bound",
+      "native_reload_status": "NATIVE_REPLAY_PASS",
+      "source_run_id": "runs/campaign60_v1_seed17/tasks/SEIS03/stream_attempt_02",
+      "audit_sha256": "b2131d826fa5cdeabf14616832720f381d0b50bd6a2251c024004a64038c8ad2",
+      "manifest_canonical_sha256": "8f3f73e4bae629131dde1792aabe02bae9035c1fa0871a2b832af4905d231ccd",
+      "API_role": "Parameter-pool selection; not independent update-program code generation",
+      "matched_Adam_steps": 80,
+      "selected_existing_development_case": true,
+      "pretraining_overlap": null,
+      "archive_seed": 17
+    },
+    {
+      "task": "MET02",
+      "dataset": "ERA5 Z500",
+      "model": "ClimaX",
+      "provider_condition": "deepseek",
+      "original_method_id": "HypoLoop",
+      "parameter_names": [
+        "head.4.bias"
+      ],
+      "allowed_native_parameters": 192,
+      "role_sizes": {
+        "F0": 20,
+        "B1": 21,
+        "B2": 20,
+        "E": 59
+      },
+      "statistical_unit": "whole calendar month (six E clusters)",
+      "native_reload_status": "NATIVE_REPLAY_PASS",
+      "source_run_id": "runs/campaign60_v1_seed17/tasks/MET02/stream_attempt_02",
+      "audit_sha256": "8323f5fdbcb9a5e27c95f38a300a9f3bd6e1a2a751e0ab74aacfcad2ef4c440a",
+      "manifest_canonical_sha256": "4758b0aabdbed8c0a437d68e38a8fa6924ba26838ca987d9203a7e97d4a80efe",
+      "API_role": "Parameter-pool selection; not independent update-program code generation",
+      "matched_Adam_steps": 80,
+      "selected_existing_development_case": true,
+      "pretraining_overlap": null,
+      "archive_seed": 17
+    },
+    {
+      "task": "PHY05",
+      "dataset": "Shallow water",
+      "model": "FNO2d",
+      "provider_condition": "deepseek",
+      "original_method_id": "HypoLoop",
+      "parameter_names": [
+        "fc2.weight",
+        "fc2.bias"
+      ],
+      "allowed_native_parameters": 129,
+      "role_sizes": {
+        "F0": 10,
+        "B1": 8,
+        "B2": 8,
+        "E": 32
+      },
+      "statistical_unit": "whole original initial-state hash group, all source simulations, times and space bound",
+      "native_reload_status": "NATIVE_REPLAY_PASS",
+      "source_run_id": "runs/campaign60_v1_seed17/tasks/PHY05/stream_attempt_02",
+      "audit_sha256": "b32fa34adfa6f187859e11b21a02687cd40b5365f43082446cff805097dcf0b3",
+      "manifest_canonical_sha256": "839ec2458ee90a1e38461111a9c6fb8ed11e92082ee24f9b5bfe1473437ebd0c",
+      "API_role": "Parameter-pool selection; not independent update-program code generation",
+      "matched_Adam_steps": 80,
+      "selected_existing_development_case": true,
+      "pretraining_overlap": "PUBLISHED_DEFAULT_HOLDOUT_WITH_CHECKPOINT_TRAIN_IDS_UNKNOWN; known equivalent initial states disclosed",
+      "archive_seed": 17
+    }
+  ],
+  "uncertainty": "Recorded seed17 point estimates; no seed SD or provider-as-seed aggregation",
+  "selection": "Outcome-informed selection of four archived cases outside the reserved21+3",
+  "legacy_run_ids_retained": true,
+  "dynamic_routes_exported": false,
+  "new_experiments": false,
+  "claim_scope": "Same-feedback comparison to80-step localAdam; not full-model training",
+  "archived_execution_seeds_per_case": 1,
+  "seed_identity": "Source manifest seed17 identifies the archived execution; no independent backbone-training repetition is inferred."
+}

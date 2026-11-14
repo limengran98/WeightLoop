@@ -1,0 +1,14 @@
+{
+  "source_sha256": "6cd0ad9823b68a09c5310b329dfb2eb26736d3106efba891db16cc6208b8cfe7",
+  "export": "Exact static fitting functions; the dynamic numeric_extra proposal function is excluded.",
+  "static_menu": "anchors(False) + fixed_extra(False), 12 configurations",
+  "fixed_optimizer": "analytic MSE or L-BFGS smooth-MAE",
+  "comparison_optimizer": "Adam, max_iterations=80",
+  "dependencies": [
+    "numpy",
+    "scipy"
+  ],
+  "task_adapters": "Native preprocessing, checkpoint and response adapters required separately.",
+  "runtime_LLM_calls": 0,
+  "independent_LLM_program_generation_for_these_cases": false
+}

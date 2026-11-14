@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use WeightLoop, please cite the public author manuscript."
+title: "WeightLoop: Weight-Space Programming with Experimental Feedback"
+type: software
+version: 0.1.1
+date-released: 2026-11-13
+license: MIT
+repository-code: "https://github.com/limengran98/WeightLoop"
+url: "https://github.com/limengran98/WeightLoop"
+authors:
+  - given-names: "Mengran"
+    family-names: "Li"
+    affiliation: "Hong Kong Institute of Science and Innovation"
+  - given-names: "Bo"
+    family-names: "Li"
+    affiliation: "University of Macau"
+  - given-names: "Weijing"
+    family-names: "Zhao"
+    affiliation: "University of Macau"
+  - given-names: "Chengyang"
+    family-names: "Zhang"
+    affiliation: "Sichuan University"
+  - given-names: "Boyu"
+    family-names: "Zhang"
+    affiliation: "Sun Yat-sen University"
+  - given-names: "Jinfeng"
+    family-names: "Xu"
+    affiliation: "The University of British Columbia"
+  - given-names: "Zelin"
+    family-names: "Zang"
+    affiliation: "Hong Kong Institute of Science and Innovation"
+  - given-names: "Victor C. M."
+    family-names: "Leung"
+    affiliation: "The University of British Columbia"
+  - given-names: "Stan Z."
+    family-names: "Li"
+    affiliation: "Westlake University"
