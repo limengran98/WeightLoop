@@ -1,0 +1,69 @@
+{
+  "title": "WeightLoop: Weight-Space Programming with Experimental Feedback",
+  "year": 2026,
+  "authors": [
+    {
+      "given": "Mengran",
+      "family": "Li",
+      "affiliation_id": 1,
+      "corresponding": false
+    },
+    {
+      "given": "Bo",
+      "family": "Li",
+      "affiliation_id": 2,
+      "corresponding": false
+    },
+    {
+      "given": "Weijing",
+      "family": "Zhao",
+      "affiliation_id": 2,
+      "corresponding": false
+    },
+    {
+      "given": "Chengyang",
+      "family": "Zhang",
+      "affiliation_id": 3,
+      "corresponding": false
+    },
+    {
+      "given": "Boyu",
+      "family": "Zhang",
+      "affiliation_id": 4,
+      "corresponding": false
+    },
+    {
+      "given": "Jinfeng",
+      "family": "Xu",
+      "affiliation_id": 5,
+      "corresponding": true
+    },
+    {
+      "given": "Zelin",
+      "family": "Zang",
+      "affiliation_id": 1,
+      "corresponding": true
+    },
+    {
+      "given": "Victor C. M.",
+      "family": "Leung",
+      "affiliation_id": 5,
+      "corresponding": false
+    },
+    {
+      "given": "Stan Z.",
+      "family": "Li",
+      "affiliation_id": 6,
+      "corresponding": false
+    }
+  ],
+  "affiliations": {
+    "1": "Hong Kong Institute of Science and Innovation",
+    "2": "University of Macau",
+    "3": "Sichuan University",
+    "4": "Sun Yat-sen University",
+    "5": "The University of British Columbia",
+    "6": "Westlake University"
+  },
+  "contact": "limengran1998@163.com"
+}

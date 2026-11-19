@@ -1,0 +1,22 @@
+{
+  "model": "deepseek-flash",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You design reusable native parameter-update programs for existing scientific predictors. Return JSON keys design and source. source is Python using only host-supplied np (NumPy) and standard numeric/list/dict builtins. No imports, files, networking, torch, autograd, scipy, sklearn, optimization libraries or Markdown fences. You design the numerical mechanism; the researcher controls permissions, feedback validation and persistence. Do not request/infer real outcomes or original-method results. No new architecture or prediction wrapper. Public functions required: recipes(model), propose_linear(features, baseline, target, weights, recipe, shared), propose_leaves(leaf_ids, residual, recipe, tree_count)."
+    },
+    {
+      "role": "user",
+      "content": "Scientific objective: when a pretrained scientific predictor receives newly returned functional assays, improve its subsequent predictions by revising a bounded set of original model parameters. Construct one reusable program for the following native interfaces. You receive model equations and data schemas only, with no real arrays, scores, prior proposed algorithm, or query outcomes. Do not reproduce an assumed reference algorithm: design a sensible, computationally bounded, deterministic correction mechanism from the equations.\n\nLinear native interfaces (function propose_linear): features has shape (n,G,D), target and baseline have shape (n,G). weights has shape (D,) when shared=True and shape (G,D) otherwise. For any newweights, native prediction exactly equals baseline + features@(newweights-weights), with the matrix product performed per output when shared=False. features includes native intercept coordinates, so arbitrary extra post-hoc output offsets are forbidden. baseline includes any immutable model offsets.\n- model='ridge': G=1, D is approximately 1800, shared=True. Original standardized molecular features and an intercept define this linear predictor. Only coefficients/intercept may change. Function outputs NEW weights of the original shape.\nTree native interface (function propose_leaves): model='xgboost', leaf_ids is an integer array (n,T) of native leaf node identities, residual is target minus original model prediction (n,), and tree_count=T (usually 300). Each tree contributes its leaf value additively. Return a list of T dictionaries mapping integer leaf IDs to finite FLOAT INCREMENTS. You may update only leaf IDs actually supported by the supplied rows. The host adds returned increments to original leaf prediction values in the original model JSON, keeping topology, splits, and training statistics fixed. No replacement tree or output wrapper is permitted.\n\nrecipes(model) returns a deterministic JSON-serializable list of candidate dictionaries, each with a unique string id and any numerical settings you design. Maximum candidate counts excluding original/no-op: ridge 4 and xgboost 3. Each dict must include model. Use a compact set within these bounds; no data-dependent candidate expansion. Incorporate numerical stabilization and a bounded/regularized mechanism appropriate to scarce feedback. Proposed output weights/increments must be finite; each function must leave its input arrays unchanged. No repeated gradient-descent/backpropagation/iterative optimization loops; closed-form linear algebra and finite bounded calculations allowed.\n\nThe researcher host uses 75 newly returned assays and fixed 3-fold feedback MSE validation for both models, selecting strict improvement over original/no-op then refitting on all feedback. Fitting sees only training-feedback rows. Three pre-existing training seeds reuse fixed BASE and data splits. Predictions are sealed before disjoint query outcomes open. The host writes updates into original Ridge coefficient/intercept or XGBoost leaf values and checks save/reload/reorder/singleton. No query results guide program selection or repair.\n\nExplain design: how forward structure informs proposal; how feedback determines native updates; regularization/bounds; generated-vs-host-supplied roles; reuse of fixed program across feedback. Return JSON design and source; no reference numerical method is supplied. No imports or files."
+    }
+  ],
+  "temperature": 0,
+  "max_tokens": 16384,
+  "thinking": {
+    "type": "disabled"
+  },
+  "stream": true,
+  "stream_options": {
+    "include_usage": true
+  }
+}

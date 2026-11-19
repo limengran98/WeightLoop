@@ -1,0 +1,163 @@
+{
+  "study": "RNA native output calibration, v3",
+  "dataset_id": "VCC2025_H1_PUBLIC_TRAIN",
+  "intervention": "CRISPRi_knockdown_not_Cas9_knockout",
+  "output_coordinates": {
+    "count": 1024,
+    "selection": "Highly variable RNA coordinates selected from base-training cells."
+  },
+  "label_unit": "perturbation target; each target response is an aggregated pseudobulk vector",
+  "roles": {
+    "base_adaptation_targets": 40,
+    "feedback_targets": 16,
+    "query_targets": 20
+  },
+  "root_training_seeds": [
+    20261109,
+    20261110,
+    20261111
+  ],
+  "split_indices": [
+    0,
+    1,
+    2
+  ],
+  "actual_model_rng_seed": "root_training_seed + 100 * split_index",
+  "fixed_partitions_shared_across_training_seeds": true,
+  "methods": {
+    "original": {
+      "display": "Original",
+      "meaning": "Immutable BASE adapted using the 40 base targets."
+    },
+    "block_adapt": {
+      "display": "Adam",
+      "meaning": "Feedback-selected Adam adaptation from the same BASE."
+    },
+    "weightloop": {
+      "display": "WeightLoop-A",
+      "meaning": "Feedback-selected reference coding-workflow editor from the same BASE."
+    }
+  },
+  "shared_adaptation_conditions": {
+    "same_initial_BASE": true,
+    "same_16_feedback_targets": true,
+    "same_two_fold_feedback_validation": true,
+    "inner_fold_target_counts": [
+      8,
+      8
+    ],
+    "same_complete_v3_native_parameter_allowlist": true,
+    "allowlists": {
+      "scGPT_native": [
+        "decoder.coeff_decoder.fc.4.weight",
+        "decoder.coeff_decoder.fc.4.bias",
+        "decoder.bias_decoder.fc.4.weight",
+        "decoder.bias_decoder.fc.4.bias",
+        "decoder.coeff_decoder.fc.2.bias",
+        "decoder.bias_decoder.fc.2.bias"
+      ],
+      "scFoundation_GEARS_native": [
+        "indv_w2[selectedoutput,all-native-cross-gene-coordinates]",
+        "indv_b2[selectedoutput]",
+        "singlecell_model.m.norm.weight",
+        "singlecell_model.m.norm.bias",
+        "recovery_w.network.3.bias"
+      ]
+    },
+    "no_op_available": true,
+    "selected_settings_refit_using_all_feedback": true,
+    "query_response_access_during_editing": false
+  },
+  "adam_settings": {
+    "updates": 64,
+    "learning_rates": [
+      0.0001,
+      0.0003
+    ],
+    "anchor_lambdas": [
+      0.001,
+      0.01
+    ],
+    "mutable_scope": "same complete v3 native parameter allowlist; selected RNA indices only",
+    "weight_decay": 0
+  },
+  "editor_candidate_counts_including_no_op": {
+    "scGPT_native": 25,
+    "scFoundation_GEARS_native": 33
+  },
+  "editor_calibration_settings": {
+    "alpha_regularization": [
+      0.0,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "alpha_bounds": [
+      0.0,
+      1.5
+    ],
+    "target": "shared NTC-relative response gain expressed in original model parameters",
+    "refinement_regularization": 1.0,
+    "refinement_radii": [
+      0.25,
+      1.0
+    ],
+    "scfoundation_full_regularization": [
+      1.0,
+      10.0
+    ],
+    "scfoundation_full_radius": 1.0
+  },
+  "statistic": {
+    "metric": "MSE",
+    "target_weighting": "equal",
+    "split_mean": "Mean of 20 target-level RNA MSEs in each fixed split.",
+    "seed_mean": "Equal-weight mean of the three split MSEs within each training seed.",
+    "summary": "Mean and sample SD (ddof=1) across the three training-seed means.",
+    "relative_reduction": "100 * (Original three-seed mean - method three-seed mean) / Original three-seed mean"
+  },
+  "replication_design": "Training-seed replication on fixed public partitions previously evaluated during v1/v2 development.",
+  "original_method_ids_preserved": true,
+  "source_files": [
+    {
+      "path": "reports/method_development/weightloop_native_three_seed_v1_20261110/mean_std_summary.tsv",
+      "sha256": "6c86b769ca4b58b31474a5f1c65788585406441322462df51c596ef4fa92b167",
+      "bytes": 12878
+    },
+    {
+      "path": "reports/method_development/weightloop_native_three_seed_v1_20261110/seed_metrics.tsv",
+      "sha256": "a856dc955c011b18c2f00e0bff3210bb53c3e02d3fd280318a18bc3a46274252",
+      "bytes": 15954
+    },
+    {
+      "path": "reports/method_development/weightloop_native_three_seed_v1_20261110/split_metrics.tsv",
+      "sha256": "f563df7acc2f5bfd181199febe087f5046aec9cec6764f7a0119e016701b20e2",
+      "bytes": 46331
+    },
+    {
+      "path": "reports/method_development/weightloop_native_three_seed_v1_20261110/compatibility/FINAL_INDEPENDENT_AUDIT.json",
+      "sha256": "3030e4f48a2f5fd728c01041a503b684f8931a36b79586d773fba6342bffa80e",
+      "bytes": 27470
+    },
+    {
+      "path": "configs/method_development/weightloop_native_three_seed_v1_20261110.json",
+      "sha256": "0d9937d2affc6784d5cb94409393e31e9c40a111b23eedeb77cf88a52564e7b1",
+      "bytes": 2580
+    },
+    {
+      "path": "configs/method_development/weightloop_vcc_native_v1_20261109.json",
+      "sha256": "f66fecc2e2a4bf72497c280698b908b7d00e5badd74b1ecc3844ec0d2f993591",
+      "bytes": 5625
+    },
+    {
+      "path": "configs/method_development/weightloop_vcc_native_v3_20261110.json",
+      "sha256": "179587ae292ed982fadba399a8cc1f290a68590b44084ea22dc6e489bb0020c5",
+      "bytes": 4521
+    },
+    {
+      "path": "reports/method_development/weightloop_vcc_native_v3_20261110/LLM_CONSTRUCTION_RECORD.json",
+      "sha256": "67a253397e060eccf41b79a666922ea5f36edee5f8feef5c6dc4f95f5c1d4e9d",
+      "bytes": 1455
+    }
+  ]
+}

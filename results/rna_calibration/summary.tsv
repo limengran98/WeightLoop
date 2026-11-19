@@ -1,0 +1,7 @@
+version	model	arm	training_seed_count	data_split_count_per_seed	std_definition	MSE_mean	MSE_std	relative_MSE_reduction_percent
+v3	scGPT_native	original	3	3	sample SD(ddof=1) across seed-level 3-split means	0.011204229947398834	0.00018237186751821402	0.0
+v3	scGPT_native	weightloop	3	3	sample SD(ddof=1) across seed-level 3-split means	0.010997388497448907	1.3358297070413275e-05	1.8461014359844288
+v3	scGPT_native	block_adapt	3	3	sample SD(ddof=1) across seed-level 3-split means	0.010991937916964444	1.4937019006446605e-05	1.8947489602681353
+v3	scFoundation_GEARS_native	original	3	3	sample SD(ddof=1) across seed-level 3-split means	0.012075055647196407	3.4975841503374276e-05	0.0
+v3	scFoundation_GEARS_native	weightloop	3	3	sample SD(ddof=1) across seed-level 3-split means	0.011170623399702977	2.5968224854305273e-05	7.490087614655606
+v3	scFoundation_GEARS_native	block_adapt	3	3	sample SD(ddof=1) across seed-level 3-split means	0.012075055727773157	3.497587328007115e-05	-6.672992033125416e-07

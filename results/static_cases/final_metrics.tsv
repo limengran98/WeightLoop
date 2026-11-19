@@ -1,0 +1,9 @@
+task	dataset	provider_condition	archive_seed	method	legacy_method_id	native_error	metric	unit	error_relative_to_Adam80	error_reduction_vs_Adam80_percent	feedback_entities	evaluation_entities	allowed_native_parameters
+BIO03	Adamson	deepseek	17	Fixed	HypoLoop	0.04257568775836394	RNA MSE	source-expression squared	0.9469275849462654	5.307241505373458	16	9	1024
+BIO03	Adamson	deepseek	17	Adam80	Adam	0.04496192574301228	RNA MSE	source-expression squared	1.0	0.0	16	9	1024
+SEIS03	INSTANCE	deepseek	17	Fixed	HypoLoop	5.249687499999999	P-arrival MAE	seconds	0.8144179958307072	18.558200416929278	56	64	27
+SEIS03	INSTANCE	deepseek	17	Adam80	Adam	6.4459375	P-arrival MAE	seconds	1.0	0.0	56	64	27
+MET02	ERA5 Z500	deepseek	17	Fixed	HypoLoop	1029.8329333987483	area-weighted RMSE	m2 s-2	0.8671657675990978	13.283423240090215	61	59	192
+MET02	ERA5 Z500	deepseek	17	Adam80	Adam	1187.5848561804087	area-weighted RMSE	m2 s-2	1.0	0.0	61	59	192
+PHY05	Shallow water	deepseek	17	Fixed	HypoLoop	0.008034899841193571	full-field relative L2	dimensionless	0.9489632571168198	5.103674288318014	26	32	129
+PHY05	Shallow water	deepseek	17	Adam80	Adam	0.008467029446014109	full-field relative L2	dimensionless	1.0	0.0	26	32	129

@@ -1,0 +1,27 @@
+{
+  "name": "WeightLoop",
+  "description": "Weight-space programming with experimental feedback: GPT-6 Astra and DeepSeek construct reusable editors for persistent native model updates.",
+  "repository": "https://github.com/limengran98/WeightLoop",
+  "project_url": "https://limengran98.github.io/WeightLoop/",
+  "topics": [
+    "model-editing",
+    "weight-space-programming",
+    "scientific-machine-learning",
+    "experimental-design"
+  ],
+  "contact": "limengran1998@163.com",
+  "primary_comparison": "Fixed numerical editing versus Adam with matched feedback and DeepSeek-selected native parameter pools",
+  "constructors": {
+    "GPT-6 Astra": "Interactive coding workflow",
+    "DeepSeek": "Independent official-API program construction for functional ranking and sequential discovery"
+  },
+  "constructor_documentation": {
+    "GPT-6 Astra": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+    "DeepSeek": "https://api-docs.deepseek.com/quick_start/pricing/"
+  },
+  "native_parameter_pool_provider": "DeepSeek",
+  "paper": {
+    "arxiv": "https://arxiv.org/abs/2611.07319",
+    "pdf": "assets/WeightLoop.pdf"
+  }
+}
